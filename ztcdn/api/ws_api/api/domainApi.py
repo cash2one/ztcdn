@@ -9,12 +9,11 @@ Created on 2013-1-10
 
 import sys, logging, ztcdn.api.ws_api.util.ApiUtil as util, xml.dom as dom, xml.dom.minidom as minidom
 import traceback, base64
-import datetime
 from ztcdn.api.ws_api.util.ApiUtil import BaseResult
 from ztcdn.config import WS_USER, WS_PASS
+from ztcdn.config import logging
 
-logging.basicConfig(level = logging.ERROR)
-logger = logging.getLogger('ws.cloundcdn')
+logger = logging.getLogger(__name__)
 
 X_CNC_REQUEST_ID = 'x-cnc-request-id'
 X_CNC_DATE = 'x-cnc-date'
@@ -55,7 +54,7 @@ class DomainApi(object):
         url = self.HOST + "/api/domain"
         try:
             post = domainToXml(domain)
-            print 'WWWWW %s' % post
+            logger.debug('request: ' + post)
             ret = util.httpReqeust(url, post, self.makeHeaders(), "POST")
             if ret.status == 202:
                 result = xmlToSuccess(ret)
@@ -524,7 +523,6 @@ def xmlToDomain(ret):
     
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
-    print "WWWWW response:" + xmlString
     doc = minidom.parseString(xmlString)
     
     domainNode = util.getChildNode(doc, 'domain')

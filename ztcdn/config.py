@@ -1,4 +1,5 @@
 __author__ = 'liujiahua'
+import logging
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -22,8 +23,15 @@ ADMIN_PROJ = '1234567890'
 
 
 DL_USER = '1234567890'
-DL_PASS = 'accesskey'
+DL_PASS = 'accesskeyid'
 
-WS_USER = 'cdn'
-WS_PASS = '1234567890'
+WS_USER = 'gi'
+WS_PASS = '8f'
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(pathname)s[line:%(lineno)d] %(levelname)s %(message)s',
+                    datefmt='%a, %d %b %Y %H:%M:%S',
+                    filename='E:/ztcdn/logs/all.log',
+                    filemode='a')
+
 

@@ -8,15 +8,15 @@ Created on 2013-1-10
 if __name__ == '__main__':
     pass
 
-import hashlib, urlparse, httplib, time, logging, base64, hmac, sha, urllib, os
-import sys
-import logging, ConfigParser, xml.dom as dom, xml.dom.minidom as minidom
-from ztcdn import db
+import urlparse, httplib, time, base64, hmac, sha
+import xml.dom.minidom as minidom
 from ztcdn.models import cdn_manage_sp
 from rfc3339 import rfc3339
 from datetime import datetime
+from ztcdn.config import logging
 
 X_CNC_REQUEST_ID = 'x-cnc-request-id'
+logger = logging.getLogger(__name__)
 
 def encodePassword(pw):
     ''' 此处的 password需要 先经过base64加密 '''
@@ -31,10 +31,10 @@ def httpReqeust(url, body = None, headers = None, method = "POST"):
     ''' 进行http请求 '''
     urlList = urlparse.urlparse(url)
     
-    logging.debug("url: " + str(urlList));
-    logging.debug("header:" + str(headers))
-    logging.debug("method: " + method);
-    logging.debug("body: " + body)
+    logger.debug("url: " + str(urlList));
+    logger.debug("header:" + str(headers))
+    logger.debug("method: " + method);
+    logger.debug("body: " + body)
     if not urlList.scheme or not urlList.netloc or not urlList.path:
         raise Exception("url 格式出错, " + url)
 
@@ -47,8 +47,8 @@ def httpReqeust(url, body = None, headers = None, method = "POST"):
     if urlList.query:
         path = path + "?" + urlList.query
     con.request(method, path, body, headers)
-    res =  con.getresponse()
-    logging.debug("status:" + str(res.status) + ", reason:" + res.reason)
+    res = con.getresponse()
+    logger.debug("status:" + str(res.status) + ", reason:" + res.reason)
     return res
 
 def getRFC3339Time(dateStr):
@@ -141,7 +141,7 @@ def xmlToDefaultSuccess(ret):
     
 def getReturnXmlMsg(ret):
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     xmlString = str(xmlString)
     doc = minidom.parseString(xmlString)
     responseNode = getChildNode(doc, 'response')

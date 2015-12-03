@@ -9,6 +9,7 @@ import xml.dom as dom, xml.dom.minidom as minidom
 import sys
 import traceback
 from ztcdn.config import DL_USER, DL_PASS
+from ztcdn.config import logging
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -138,7 +139,7 @@ class DomainApi(object):
         type = REQ_DICT['create']['type']
         rq_url = REQ_DICT['create']['rq_url']
         rq_body = domainToXml(domain)
-        print 'DDDDDDD %s' % rq_body
+        logger.debug('request: ' + rq_body)
         res = self.req(type, rq_url, rq_body)
         if res.status == 201:
             return xmlToDomain(res)
@@ -611,7 +612,6 @@ def xmlToDomain(ret):
     etag = ret.getheader("ETag")
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
-    print xmlString
     doc = minidom.parseString(xmlString.encode("utf-8"))
     domainNode = util.getChildNode(doc, 'Distribution')
     domainconfig = util.getChildNode(domainNode, 'DistributionConfig')

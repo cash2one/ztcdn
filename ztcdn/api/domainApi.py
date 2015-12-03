@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 __author__ = 'liujiahua'
-from flask import Blueprint
 from flask import jsonify
 from flask import request
 from flask import abort
-import requests
-from urlparse import urljoin
-import commonDomainStruct
 from ztcdn.api import cdn_api
 from ztcdn.util.apiUtil import jsonToDomain, commonResult, addResult
 import sys
