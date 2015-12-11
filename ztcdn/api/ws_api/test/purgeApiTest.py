@@ -9,11 +9,11 @@ reload(sys)
 #sys.setdefaultencoding('utf8')
 
 import logging
-import ztcdn.api.ws_api.api.purgeApi as purgeApi
+import ztcdn.api.ws_api.api.domainApi as domainApi
 
 logging.basicConfig(level = logging.DEBUG)
 
-api = purgeApi.PurgeApi("giant_cdn", "8f8394b91653afa3")
+api = domainApi.DomainApi()
 dateFrom = "2013-09-01 01:00:00"
 dateTo = "2013-09-18 12:00:00"
 
@@ -29,8 +29,8 @@ print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), re
 '''
 logging.debug("根据purgeId查缓存")
 #purgeId = result.getXCncRequestId()
-purgeId = "d6479a88-55de-4f2f-9851-3f9d98e5c108"
-result = api.purgeQueryByPurgeId(purgeId)
+purgeId = "58cc4f13-5ca1-4ba0-b952-703ca089712e"
+result = api.prefetchQueryByPurgeId(purgeId)
 print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
 for i in result.getPurgeList()[0].itemList:
     print i.status, i.url, i.rate, i.isdir

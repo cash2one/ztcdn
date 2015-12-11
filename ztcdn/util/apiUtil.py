@@ -16,6 +16,7 @@ import urlparse
 import sys, traceback
 from ztcdn.config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ
 from collections import OrderedDict
+from cname import CName
 
 
 def getUserProjByToken(token):
@@ -243,6 +244,9 @@ def addResult(domain, project_id, username):
         res_error = {"error": result.getMsg()}
         return jsonify(res_error), result.getRet()
     else:
+        # 插入 cname
+        cname = CName()
+        cname.insert_cname(zt_domain_id)
         return jsonify(res), 201
 
 
@@ -286,7 +290,7 @@ def commonResult(cdnAct, domain=None, domain_id=None):
                 # 来一遍 find 以更新库
                 find_result = api.find(_id)
                 if find_result.getRet() == 0:
-                    saveFindDomainToDB(find_result.domain, i, domain_id)
+                    saveFindDomainToDB(find_result.domain, i, domain_id, is_updated=True)
 
         if cdnAct == "delete":
             _id = getSpDomainId(domain_id, i)
@@ -338,6 +342,9 @@ def commonResult(cdnAct, domain=None, domain_id=None):
     res["successRate"] = success_cdn / all_cdn_len * 100
     if cdnAct == "delete" and success_cdn == all_cdn_len:
         # 各厂商CDN都删除成功，设置主表状态为Delete
+        # 并且删除 CName
+        cname = CName()
+        cname.del_cname(domain_id)
         saveDeleteDomainToDB(domain_id)
     if success_cdn != all_cdn_len:
         res_error = {"error": result.getMsg()}
@@ -367,7 +374,8 @@ def saveAddDomainToDB(domain, sp_type, zt_domain_id, project_id, username):
     if not new_domain_exist:
         new_domain = cdn_manage_domain(domain_name=domain_name, domain_type=domain_type,
                                        domain_status=domain_status, domain_id=domain_id,
-                                       ip_list=ip_list, project_id=project_id, user_name=username)
+                                       ip_list=ip_list, project_id=project_id, user_name=username,
+                                       create_time=datetime.datetime.now())
         db.session.add(new_domain)
         db.session.commit()
         domain_table_id = new_domain.id
@@ -407,8 +415,7 @@ def saveAddDomainToDB(domain, sp_type, zt_domain_id, project_id, username):
         db.session.commit()
 
 
-def saveFindDomainToDB(domain, sp_type, zt_domain_id):
-    domain_name = domain.domainName
+def saveFindDomainToDB(domain, sp_type, zt_domain_id, is_updated=False):
     domain_status = domain.status
 
     # sp 部分
@@ -426,7 +433,8 @@ def saveFindDomainToDB(domain, sp_type, zt_domain_id):
     domain_table_id = modify_domain.id
 
     # 更新域名主表
-    # modify_domain.domain_status = domain_status
+    if is_updated:
+        modify_domain.domain_status = 'InProgress'
     if modify_domain.ip_list != ip_list:
         modify_domain.ip_list = ip_list
     modify_domain.update_time = update_time
@@ -588,6 +596,7 @@ def saveSpTask(zt_task_id, project_id, task_type, task_content, task_user, res):
         task_status='run',
         task_content=task_content,
         task_user=task_user,
+        task_create_at=datetime.datetime.now(),
     )
     db.session.add(new_task)
     db.session.commit()

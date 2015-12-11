@@ -1,6 +1,5 @@
 #coding:utf8
 __author__ = 'liujiahua'
-import logging
 import httplib
 import hashlib
 from ztcdn.api.dl_api.util.ApiUtil import BaseResult
@@ -10,7 +9,6 @@ import sys
 import traceback
 from ztcdn.config import DL_USER, DL_PASS
 from ztcdn.config import logging
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -928,7 +926,7 @@ def purgeQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'Result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -953,7 +951,7 @@ def prefetchQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'Result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -984,7 +982,7 @@ def xmlToFlowPointList(ret, reportType):
     isoFormat = getDateFormat(reportType)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     rootNode = util.getChildNode(doc, 'provider')
     dateNode = util.getChildNode(rootNode, 'date')
@@ -1008,7 +1006,7 @@ def xmlToBandWidthPointList(ret, reportType):
     isoFormat = getDateFormat(reportType)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     rootNode = util.getChildNode(doc, 'provider')
     dateNode = util.getChildNode(rootNode, 'date')

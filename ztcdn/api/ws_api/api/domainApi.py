@@ -7,7 +7,7 @@ Created on 2013-1-10
 @version: 1.0
 '''
 
-import sys, logging, ztcdn.api.ws_api.util.ApiUtil as util, xml.dom as dom, xml.dom.minidom as minidom
+import sys, ztcdn.api.ws_api.util.ApiUtil as util, xml.dom as dom, xml.dom.minidom as minidom
 import traceback, base64
 from ztcdn.api.ws_api.util.ApiUtil import BaseResult
 from ztcdn.config import WS_USER, WS_PASS
@@ -105,7 +105,7 @@ class DomainApi(object):
             traceback.print_exc(file=sys.stdout)
             return ProcessResult(-1, str(e))
         pass
-    
+
     def modify(self, domain):
         ''' 修改加速域名配置 
         @type domain: Domain
@@ -676,7 +676,7 @@ def xmlToDomainList(ret):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
     
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     domainListNode = util.getChildNode(doc, 'domain-list')
     domainList = []
@@ -869,7 +869,7 @@ def purgeQueryXmlToPurgeList(ret):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     purgeListNode = util.getChildNode(doc, 'purge-list')
     purgeList = []
@@ -897,7 +897,7 @@ def purgeQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'purge-result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -993,7 +993,7 @@ def prefetchQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
     requestId = ret.getheader(X_CNC_REQUEST_ID)
 
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'prefetch-result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -1046,7 +1046,7 @@ def xmlToFlowPointList(ret, reportType):
 
     isoFormat = getDateFormat(reportType)
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     flowPointListNode = util.getChildNode(doc, 'flow-report')
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
@@ -1069,7 +1069,7 @@ def xmlToBandWidthPointList(ret, reportType):
 
     isoFormat = getDateFormat(reportType)
     xmlString = ret.read().decode("utf-8")
-    logging.debug("response:" + xmlString)
+    logger.debug("response:" + xmlString)
     doc = minidom.parseString(xmlString)
     flowPointListNode = util.getChildNode(doc, 'flow-report')
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
@@ -1078,6 +1078,7 @@ def xmlToBandWidthPointList(ret, reportType):
     for flowNode in flowDataList:
         pointStr = util.getChildNodeText(flowNode, 'timestamp')
         pointStr = pointStr.replace('24:00:00', '23:59:59')
+        pointStr = pointStr[:16]  # 由于帝联的是2015-12-01 00:10 没有带秒， 所以网宿的删除秒
         flow = util.getChildNodeText(flowNode, 'flow')
         # 网宿没有带宽，所以需要把流量转换成带宽
         bandwidth = round(float(flow) * 8 / 300, 2)

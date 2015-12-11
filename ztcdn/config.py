@@ -22,11 +22,11 @@ ADMIN_TOKEN = '60feb5797e974a89af19e9a40f04ac07'
 ADMIN_PROJ = '1234567890'
 
 
-DL_USER = '1234567890'
-DL_PASS = 'accesskeyid'
+DL_USER = '333'
+DL_PASS = '222'
 
-WS_USER = 'gi'
-WS_PASS = '8f'
+WS_USER = '222'
+WS_PASS = '333'
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(pathname)s[line:%(lineno)d] %(levelname)s %(message)s',

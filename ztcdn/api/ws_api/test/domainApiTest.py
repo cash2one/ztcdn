@@ -20,32 +20,43 @@ api = domainApi.DomainApi()
 purgeLocation = "a79af3d0-7188-42bd-a5a9-472355b4dc4e"
 createDomainRequstId = "42b50404-2db3-4802-966c-1b3c9ad42948"
 #domainId = "193382"
-domainName = "testcoco.com"
+domainName = "downloadnew1.ztgame.com.cn"
 
 
 domain = domainApi.Domain()
 domain.domainName = domainName
-#domain.domainId = domainId
-domain.serviceType = "web"
+domain.domainId = '1260496'
+domain.serviceType = "download"
 
 originConfig = domainApi.OriginConfig()
-originConfig.originIps = ["115.29.209.110",]
+originConfig.originIps = ["222.73.243.32",]
 
 domain.originConfig = originConfig
 
-
 cacheBehavior = domainApi.CacheBehavior()
-cacheBehavior.priority = 1
-cacheBehavior.cacheTtl = 10
-cacheBehavior.pathPattern = "/(a|b)/*.html"
+cacheBehavior.cacheTtl =31536000
+cacheBehavior.pathPattern = ".*"
 cacheBehavior.ignoreCacheControl = False
 domain.cacheBehaviors = [cacheBehavior]
 
+
+queryStringSetting = domainApi.QueryStringSetting()
+queryStringSetting.ignoreQueryString = False
+queryStringSetting.pathPattern = ".*"
+domain.queryStringSettings = [queryStringSetting]
+
+
+result = api.modify(domain)
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
+
+
+'''
 logging.debug("获取指定频道信息")
-result = api.find('1257979')
+result = api.find('1262421')
 print 'result:', result.domain.cname,  result.domain.status, result.getRet(), result.getMsg(), result.getXCncRequestId()
 print 'domain:', domainApi.domainToXml(result.domain)
-'''
+
+
 logging.debug("获取用户下的频道列表")
 result = api.listAll()
 print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
@@ -69,8 +80,8 @@ advOriginConfig.detectUrl = detectUrl
 advOriginConfig.detectPeriod = 10
 
 queryStringSetting = domainApi.QueryStringSetting()
-queryStringSetting.ignoreQueryString = True
-queryStringSetting.pathPattern = "/(a|b)/*.html"
+queryStringSetting.ignoreQueryString = False
+queryStringSetting.pathPattern = ".*"
 domain.queryStringSettings = [queryStringSetting]
 
 originConfig.advOriginConfigs = [advOriginConfigMult, advOriginConfig]
