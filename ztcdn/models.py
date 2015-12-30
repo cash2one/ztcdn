@@ -137,3 +137,17 @@ class cdn_manage_sp_choose(db.Model):
 
     def __repr__(self):
         return '<TaskSP %r>' % self.used_sp_list
+
+
+# 日志分析DB，是单独的另外一台 mysql
+class cdn_manage_log(db.Model):
+    __bind_key__ = 'cdn_log'
+    id = db.Column(db.Integer, primary_key=True)
+    domain_name = db.Column(db.String(80))
+    date = db.Column(db.DateTime)
+    url = db.Column(db.String(256))
+    count = db.Column(db.Integer)
+    flow = db.Column(db.Float)
+
+    def __repr__(self):
+        return '<analysis %r>' % self.domain_name

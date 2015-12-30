@@ -41,6 +41,7 @@ from ztcdn.api import identity
 from ztcdn.api import domainApi
 from ztcdn.api import purgeApi
 from ztcdn.api import reportApi
+from ztcdn.api import analysisApi
 ##from ztcdn.api import base
 ##from ztcdn.api import ceilometer
 ##from ztcdn.api import cinder

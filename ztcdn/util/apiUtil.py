@@ -5,7 +5,7 @@ __author__ = 'liujiahua'
 from ztcdn.api.commonDomainStruct import Domain, CacheBehavior, OriginConfig, User
 from flask import jsonify
 from ztcdn.models import cdn_manage_domain, cdn_manage_sp, cdn_manage_sp_choose, cdn_manage_cacherules, \
-    cdn_manage_tasklist, cdn_manage_sp_tasklist
+    cdn_manage_tasklist, cdn_manage_sp_tasklist, cdn_manage_log
 from ztcdn import db
 import copy
 import uuid
@@ -714,3 +714,36 @@ def mergeData(dataList):
         item["value"] = str(sum)
         merged_data.append(item)
     return merged_data
+
+
+# 日志分析，从 DB 获取 url 的访问次数和流量，以及 top 10
+def get_cdn_log(domain_name, start, end):
+    log_obj = cdn_manage_log.query.filter(
+        cdn_manage_log.domain_name == domain_name,
+        cdn_manage_log.date >= start,
+        cdn_manage_log.date <= end
+    ).all()
+
+    if log_obj:
+        all_dict = {}
+        for i in log_obj:
+            if all_dict.has_key(i.url):
+                all_dict[i.url] = [all_dict[i.url][0] + i.flow, all_dict[i.url][1] + i.count]
+            else:
+                all_dict[i.url] = [i.flow, i.count]
+        # 字典转为列表并排序
+        list_to_sorted = []
+        for _key in all_dict:
+            list_to_sorted.append((_key, all_dict[_key][0], all_dict[_key][1]))
+        list_sorted = sorted(list_to_sorted, key=lambda item: item[2])
+        list_sorted.reverse()
+        top_10 = list_sorted[:10]
+        if len(top_10) != 10:
+            while len(top_10) == 10:
+                top_10.append('null')
+
+        result = {"top_10": top_10,
+                  "url_list": list_sorted}
+        return result
+    else:
+        return {"top_10": '', "url_list": ''}
