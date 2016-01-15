@@ -582,6 +582,7 @@ def saveErrorTask(zt_task_id, project_id, task_type, task_content, task_user):
         task_status='error',
         task_content=task_content,
         task_user=task_user,
+        task_create_at=datetime.datetime.now(),
     )
     db.session.add(new_task)
     db.session.commit()
@@ -734,7 +735,7 @@ def get_cdn_log(domain_name, start, end):
         # 字典转为列表并排序
         list_to_sorted = []
         for _key in all_dict:
-            list_to_sorted.append((_key, all_dict[_key][0], all_dict[_key][1]))
+            list_to_sorted.append((_key, round(all_dict[_key][0], 2), all_dict[_key][1]))
         list_sorted = sorted(list_to_sorted, key=lambda item: item[2])
         list_sorted.reverse()
         top_10 = list_sorted[:10]

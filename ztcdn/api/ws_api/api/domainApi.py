@@ -12,6 +12,8 @@ import traceback, base64
 from ztcdn.api.ws_api.util.ApiUtil import BaseResult
 from ztcdn.config import WS_USER, WS_PASS
 from ztcdn.config import logging
+import datetime
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -1052,9 +1054,14 @@ def xmlToFlowPointList(ret, reportType):
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
     flowPointList = []
     flowDataList = util.getChildNodeList(flowPointListNode, 'flow-data')
+    time_delta = datetime.timedelta(seconds=1)
     for flowNode in flowDataList:
         pointStr = util.getChildNodeText(flowNode, 'timestamp')
-        pointStr = pointStr.replace('24:00:00', '23:59:59')
+        if re.search('24:00:00', pointStr):
+            # 网宿的0点为24:00:00 ， 改成 00:00:00
+            pointStr = pointStr.replace('24:00:00', '23:59:59')
+            point = datetime.datetime.strptime(pointStr, isoFormat)
+            pointStr = (point + time_delta).strftime(isoFormat)
         # point = datetime.datetime.strptime(pointStr, isoFormat)
         flow = util.getChildNodeText(flowNode, 'flow')
         flowPoint = FlowPoint(pointStr, flow)
@@ -1075,9 +1082,13 @@ def xmlToBandWidthPointList(ret, reportType):
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
     flowPointList = []
     flowDataList = util.getChildNodeList(flowPointListNode, 'flow-data')
+    time_delta = datetime.timedelta(seconds=1)
     for flowNode in flowDataList:
         pointStr = util.getChildNodeText(flowNode, 'timestamp')
-        pointStr = pointStr.replace('24:00:00', '23:59:59')
+        if re.search('24:00:00', pointStr):
+            pointStr = pointStr.replace('24:00:00', '23:59:59')
+            point = datetime.datetime.strptime(pointStr, isoFormat)
+            pointStr = (point + time_delta).strftime(isoFormat)
         pointStr = pointStr[:16]  # 由于帝联的是2015-12-01 00:10 没有带秒， 所以网宿的删除秒
         flow = util.getChildNodeText(flowNode, 'flow')
         # 网宿没有带宽，所以需要把流量转换成带宽

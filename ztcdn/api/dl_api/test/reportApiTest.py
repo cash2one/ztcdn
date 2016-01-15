@@ -10,7 +10,7 @@ from ztcdn.api.dl_api.api import domainApi
 if __name__ == '__main__':
     pass
 import logging
-import ztcdn.api.ws_api.api.reportApi as reportApi
+from ztcdn.api.dl_api.api import domainApi
 
 logging.basicConfig(level = logging.DEBUG)
 
