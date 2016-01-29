@@ -24,9 +24,9 @@ class CName(object):
       _distid=distid
       self.cur2.execute('select id,domain_type,domain_name from cloud_cdn.cdn_manage_domain where domain_id=%s;' , _distid)
       _domain_v=self.cur2.fetchone()
-      _domain_v_id=_domain_v["id"]
-      _domain_v_type=_domain_v["domain_type"]
-      _domain_v_name=_domain_v["domain_name"]
+      _domain_v_id=_domain_v.get('id', None)
+      _domain_v_type=_domain_v.get('domain_type', None)
+      _domain_v_name=_domain_v.get('domain_name', None)
       if _domain_v_type == "web":
          sp_domain_type="dl_api"
       elif _domain_v_type == "download":

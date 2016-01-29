@@ -46,9 +46,15 @@ queryStringSetting.pathPattern = ".*"
 domain.queryStringSettings = [queryStringSetting]
 
 
-result = api.modify(domain)
-print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
+#result = api.modify(domain)
+#print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
 
+logging.debug("获取用户下的频道列表")
+result = api.listAll()
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
+print 'domainSummarys:', result.getDomainSummarys()
+for i in result.getDomainSummarys():
+    print i.domainName, i.domainId
 
 '''
 logging.debug("获取指定频道信息")
@@ -57,12 +63,7 @@ print 'result:', result.domain.cname,  result.domain.status, result.getRet(), re
 print 'domain:', domainApi.domainToXml(result.domain)
 
 
-logging.debug("获取用户下的频道列表")
-result = api.listAll()
-print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
-print 'domainSummarys:', result.getDomainSummarys()
-for i in result.getDomainSummarys():
-    print i.domainName, i.domainId
+
 
 
 advOriginConfigMult = domainApi.AdvOriginConfig()

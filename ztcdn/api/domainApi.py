@@ -6,8 +6,11 @@ from flask import abort
 from ztcdn.api import cdn_api
 from ztcdn.util.apiUtil import jsonToDomain, commonResult, addResult
 import sys
+from ztcdn.config import logging
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
+logger = logging.getLogger(__name__)
 
 @cdn_api.route('/add', methods=['POST'])
 def add():

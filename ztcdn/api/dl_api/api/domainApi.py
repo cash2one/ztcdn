@@ -526,7 +526,7 @@ class OriginConfig(object):
 
 class AdvOriginConfig(object):
     '''复杂回源规则'''
-    def __init__(self, carrierCode = "ANY", originSourceEx = None, backToSourceType = "RoundRobin"):
+    def __init__(self, carrierCode = "ANY", originSourceEx = None, backToSourceType = "Backup"):
         ''' 初始化复杂回源规则
         @type isps: list of str
         @param isps: 设置isp信息,允许设定多个运营商;dx("中国电信"), wt("中国联通"), yidong("中国移动"), tt("中国铁通"), jyw("中国教育网"), changkuan("长城宽带"), gd("中国广电"), qita("其他"), all("全部");
@@ -869,6 +869,7 @@ def purgeQueryXmlToFailure(ret):
     ''' 返回xml 解析 带错误信息的 缓存查询返回xml'''
     msg = util.getReturnXmlMsg(ret)
     return PurgeQueryResult(ret.status, ret.reason + ":" + msg)
+
 
 def purgeQueryByPurgeIdXmlToFailure(ret):
     ''' 返回xml 解析 带错误信息的 根据purgeId缓存查询返回xml'''
