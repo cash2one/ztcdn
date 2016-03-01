@@ -25,7 +25,7 @@ ADMIN_PROJ = '1234567890'
 DL_USER = 'test'
 DL_PASS = 'test'
 
-WS_USER = 'test'
+WS_USER = 'test1'
 WS_PASS = 'test'
 
 logging.basicConfig(level=logging.DEBUG,
