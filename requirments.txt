@@ -1,0 +1,8 @@
+[ztcdn]
+pip = 7.1.0
+flask = 0.10.1
+Flask-SQLAlchemy = 2.1
+uwsgi = 2.0.6
+
+[cdn]
+django = 1.6.0

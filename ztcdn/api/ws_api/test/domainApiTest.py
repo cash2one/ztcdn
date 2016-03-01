@@ -55,7 +55,11 @@ print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), re
 print 'domainSummarys:', result.getDomainSummarys()
 for i in result.getDomainSummarys():
     print i.domainName, i.domainId
-
+"""
+result = api.find("1283933")
+print 'result:', result.domain.cname,  result.domain.status, result.getRet(), result.getMsg(), result.getXCncRequestId()
+print 'domain:', domainApi.domainToXml(result.domain)
+"""
 '''
 logging.debug("获取指定频道信息")
 result = api.find('1262421')

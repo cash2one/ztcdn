@@ -52,15 +52,15 @@ def httpReqeust(url, body = None, headers = None, method = "POST"):
     return res
 
 def getRFC3339Time(dateStr):
-    date_object = datetime.strptime(dateStr, "%Y-%m-%d %H:%M:%S");
-    return rfc3339(date_object);
+    date_object = datetime.strptime(dateStr, "%Y-%m-%d %H:%M:%S")
+    return rfc3339(date_object)
 
 def parseRFC1123Time(dateStr):
     isoFormat = "%a, %d %b %Y %H:%M:%S %Z"
     return datetime.strptime(dateStr, isoFormat)
 
 def getRFCTime():
-    return time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime());
+    return time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime())
 
 def getCnCTime():
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -141,7 +141,9 @@ def xmlToDefaultSuccess(ret):
     
 def getReturnXmlMsg(ret):
     xmlString = ret.read().decode("utf-8")
+    requestId = ret.getheader(X_CNC_REQUEST_ID)
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     xmlString = str(xmlString)
     doc = minidom.parseString(xmlString)
     responseNode = getChildNode(doc, 'response')

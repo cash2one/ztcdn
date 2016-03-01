@@ -26,7 +26,7 @@ domain.cacheBehaviors = [cacheBehavior]
 
 logging.debug("获取用户下的频道列表")
 result = api.listAll()
-print 'result:', result.getRet()
+print 'result:', result
 
 '''
 logging.debug("添加频道")

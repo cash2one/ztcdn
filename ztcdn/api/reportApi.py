@@ -67,7 +67,8 @@ def getFlow():
                     #    "msg": result.getMsg(),
                     #}
     zt_flow_value = mergeData(to_be_merged)
-    res = {"flowValue": zt_flow_value}
+    value_sum = sum([float(v['value']) for v in zt_flow_value])
+    res = {"flowValue": zt_flow_value, "totalCount": value_sum}
     return jsonify(res)
 
 

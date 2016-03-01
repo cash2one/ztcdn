@@ -313,6 +313,20 @@ class DomainApi(object):
             traceback.print_exc(file=sys.stdout)
             return FlowProcessResult(-1, str(e))
 
+
+    def getReqStatus(self, reqId):
+        url = self.HOST + "/api/request/" + str(reqId)
+        try:
+            ret = util.httpReqeust(url, "", self.makeHeaders(), "GET")
+            if ret.status == 200:
+                return ret.read()
+            else:
+                return None
+        except Exception, e:
+            traceback.print_exc(file=sys.stdout)
+            return PurgeQueryResult(-1, str(e))
+
+
     def makeHeaders(self):
         ''' 组装头部  '''  
         global X_CNC_DATE
@@ -525,6 +539,7 @@ def xmlToDomain(ret):
     
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     
     domainNode = util.getChildNode(doc, 'domain')
@@ -602,8 +617,8 @@ def domainToXml(domain):
         util.addElement(doc, domainNode, 'cname',  domain.cname)
     if domain.status is not None:
         util.addElement(doc,domainNode, 'status', domain.status)
-    if domain.domainId is not None:
-        util.addElement(doc, domainNode, 'domain-id', domain.domainId)
+    #if domain.domainId is not None:
+        #util.addElement(doc, domainNode, 'domain-id', domain.domainId)
     
     if domain.serviceAreas is not None:
         util.addElement(doc, domainNode, 'service-areas', domain.serviceAreas)
@@ -872,6 +887,7 @@ def purgeQueryXmlToPurgeList(ret):
 
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     purgeListNode = util.getChildNode(doc, 'purge-list')
     purgeList = []
@@ -900,6 +916,7 @@ def purgeQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
 
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'purge-result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -996,6 +1013,7 @@ def prefetchQueryByPurgeIdXmlToPurgeList(ret_status, ret, purgeId):
 
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     purgeResultNode = util.getChildNode(doc, 'prefetch-result')
     requestDateStr = util.getChildNodeText(purgeResultNode, 'request-date')
@@ -1049,6 +1067,7 @@ def xmlToFlowPointList(ret, reportType):
     isoFormat = getDateFormat(reportType)
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     flowPointListNode = util.getChildNode(doc, 'flow-report')
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
@@ -1077,6 +1096,7 @@ def xmlToBandWidthPointList(ret, reportType):
     isoFormat = getDateFormat(reportType)
     xmlString = ret.read().decode("utf-8")
     logger.debug("response:" + xmlString)
+    logger.debug("response: Request_id => " + requestId)
     doc = minidom.parseString(xmlString)
     flowPointListNode = util.getChildNode(doc, 'flow-report')
     flowSummary = util.getChildNodeText(flowPointListNode, 'flow-summary')
