@@ -2,14 +2,18 @@
 __author__ = 'liujiahua'
 from flask import jsonify
 from flask import request
+from ztcdn.config import logging
 from ztcdn.api import cdn_api
 from ztcdn.util.apiUtil import verifyUrl, mergeData, getUserProjByToken
 import sys
+import datetime
+import json
 from collections import OrderedDict
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+logger = logging.getLogger(__name__)
 
 @cdn_api.route('/flow', methods=['GET'])
 def getFlow():
@@ -20,6 +24,10 @@ def getFlow():
     end = request.json.get("end")
     if not domain_names or not start or not end:
         return jsonify({"error": "Bad request, please check request data"}), 400
+
+    delta = datetime.datetime.strptime(end, '%Y-%m-%d') - datetime.datetime.strptime(start, '%Y-%m-%d')
+    if delta.days > 30:
+        return jsonify({"error": '查询范围请不要超过31天'.decode('utf-8')}), 400
 
     domain_names = domain_names.split(',')
     # 验证是不是自己的域名
@@ -82,6 +90,10 @@ def bandwidth():
     if not domain_names or not start or not end:
         return jsonify({"error": "Bad request, please check request data"}), 400
 
+    delta = datetime.datetime.strptime(end, '%Y-%m-%d') - datetime.datetime.strptime(start, '%Y-%m-%d')
+    if delta.days > 30:
+        return jsonify({"error": '查询范围请不要超过31天'.decode('utf-8')}), 400
+
     domain_names = domain_names.split(',')
     # 验证是不是自己的域名
     project_ids = []
@@ -130,3 +142,30 @@ def bandwidth():
     zt_flow_value = mergeData(to_be_merged)
     res = {"bandwidth": zt_flow_value}
     return jsonify(res)
+
+
+@cdn_api.route('/get_price/<month>', methods=['GET'])
+def get_price(month):
+    if not month:
+        return jsonify({"error": "can not found month"}), 400
+
+    try:
+        import os
+        a = os.popen('/root/shiwenjun/sum_game.sh %s' % month)
+        detail = []
+        for i in a.readlines():
+            j = i.split()
+            detail.append(
+                {
+                    "domain": j[0],
+                    "project_name": j[1],
+                    "month": j[2],
+                    "type": j[3],
+                    "price": j[4]
+                }
+            )
+        return jsonify({'code': 200, 'msg': '',
+                        'detail': json.loads(json.dumps(detail, ensure_ascii=False), 'gbk')})
+    except:
+        logger.exception('Error with get price')
+        return jsonify({'code': 404, 'msg': 'can not found bill'}), 404

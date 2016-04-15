@@ -21,14 +21,16 @@ domain.originConfig = originConfig
 cacheBehavior = domainApi.CacheBehavior()
 domain.cacheBehaviors = [cacheBehavior]
 
+result = api.delete('')
+print 'result:', result.getRet(), result.getMsg()
 
-
+'''
 
 logging.debug("获取用户下的频道列表")
 result = api.listAll()
 print 'result:', result
 
-'''
+
 logging.debug("添加频道")
 result = api.add(domain)
 print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()

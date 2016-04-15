@@ -14,7 +14,7 @@ import json
 import httplib
 import urlparse
 import sys, traceback
-from ztcdn.config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ
+from ztcdn.config import AUTH_PUBLIC_URI, ADMIN_TOKEN, ADMIN_PROJ, YY_USER
 from collections import OrderedDict
 from cname import CName
 
@@ -163,7 +163,10 @@ def getSpDomainId(domain_id, sp_domain_type):
     domain_obj = cdn_manage_domain.query.filter_by(domain_id=domain_id).first()
     domain_name = domain_obj.domain_name
     sp_domain_obj = cdn_manage_sp.query.filter_by(domain_name=domain_name, sp_domain_type=sp_domain_type).first()
-    _id = sp_domain_obj.sp_domain_id
+    if sp_domain_obj:
+        _id = sp_domain_obj.sp_domain_id
+    else:
+        _id = ''
     return _id
 
 
@@ -183,7 +186,11 @@ def getSpTaskId(zt_task_id, sp_domain_type):
 
 
 def addResult(domain, project_id, username):
-    cdn_clients = getCdnClients(domain=domain)
+    # 逸云用户单独建站
+    if username in YY_USER:
+        cdn_clients = ['yy_api']
+    else:
+        cdn_clients = getCdnClients(domain=domain)
     all_cdn_len = len(cdn_clients)
     success_cdn = 0
     res = {}
@@ -193,7 +200,6 @@ def addResult(domain, project_id, username):
         exec "import ztcdn.api." + i + ".api.domainApi as aaa"
         DomainApi = getattr(aaa, 'DomainApi')
         api = DomainApi()
-        result = ''
         has_success = 0
         result = api.add(domain)
         if result.getRet() == 0:

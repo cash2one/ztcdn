@@ -1,2 +1,615 @@
-Tue, 01 Mar 2016 15:16:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\config.py', reloading
-Tue, 01 Mar 2016 15:16:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Mon, 14 Mar 2016 16:58:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\config.py', reloading
+Mon, 14 Mar 2016 16:58:39 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/purge', params='', query='', fragment='')
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Tue, 15 Mar 2016 09:08:00 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOllhYWlFK0U3am1wWjY5TjhvZ0gyNWhCcGZnMD0=', 'Accept': 'application/xml'}
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><purge-urls><version>1.0.0</version><file-url>http://youjjzz.ztgame.com/index.html</file-url></purge-urls>
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Tue, 15 Mar 2016 17:08:00 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => 11375d7a-1223-4c11-aa11-ef77ddd51f5b
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>URL缓存刷新任务提交成功!</detail></ccsc>
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:159] DEBUG Purge request: http://youjjzz.ztgame.com/index.html
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/contentService/AddRefresh', params='', query='url=http%3A%2F%2Fyoujjzz.ztgame.com%2Findex.html', fragment='')
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-15 17:08:01', 'Host': 'openapi.exclouds.com', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Tue, 15 Mar 2016 17:08:01 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {u'message': u'\u5168\u90e8\u4efb\u52a1\u63d0\u4ea4\u6210\u529f', u'code': 200, u'batch': u'1458032880'}
+Tue, 15 Mar 2016 17:08:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [15/Mar/2016 17:08:02] "POST /cdn_api/purge HTTP/1.1" 200 -
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/purge', params='', query='', fragment='')
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Tue, 15 Mar 2016 09:08:58 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOjN6aFhCZ3U2aEpTVFlwNWVLZ00vOC9BVXV1MD0=', 'Accept': 'application/xml'}
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><purge-urls><version>1.0.0</version><file-url>http://youjjzz.ztgame.com/index.html</file-url></purge-urls>
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Tue, 15 Mar 2016 17:08:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => f343c63b-29cc-456d-904d-207826a503f5
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>URL缓存刷新任务提交成功!</detail></ccsc>
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:159] DEBUG Purge request: http://youjjzz.ztgame.com/index.html
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/contentService/AddRefresh', params='', query='url=http%3A%2F%2Fyoujjzz.ztgame.com%2Findex.html', fragment='')
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-15 17:08:59', 'Host': 'openapi.exclouds.com', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Tue, 15 Mar 2016 17:08:59 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {u'message': u'\u5168\u90e8\u4efb\u52a1\u63d0\u4ea4\u6210\u529f', u'code': 200, u'batch': u'1458032938'}
+Tue, 15 Mar 2016 17:08:59 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [15/Mar/2016 17:08:59] "POST /cdn_api/purge HTTP/1.1" 200 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/purge', params='', query='', fragment='')
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Tue, 15 Mar 2016 09:09:26 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOjB5VElxeXBEdW1hazJXY3hSS1J0RTJ4SUJaQT0=', 'Accept': 'application/xml'}
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><purge-urls><version>1.0.0</version><file-url>http://youjjzz.ztgame.com/index.html</file-url></purge-urls>
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => 6ce0ffe1-be0b-48d7-8ddb-e468f392e4db
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>URL缓存刷新任务提交成功!</detail></ccsc>
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:159] DEBUG Purge request: http://youjjzz.ztgame.com/index.html
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/contentService/AddRefresh', params='', query='url=http%3A%2F%2Fyoujjzz.ztgame.com%2Findex.html', fragment='')
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-15 17:09:26', 'Host': 'openapi.exclouds.com', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Tue, 15 Mar 2016 17:09:26 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {u'message': u'\u5168\u90e8\u4efb\u52a1\u63d0\u4ea4\u6210\u529f', u'code': 200, u'batch': u'1458032966'}
+Tue, 15 Mar 2016 17:09:27 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [15/Mar/2016 17:09:27] "POST /cdn_api/purge HTTP/1.1" 200 -
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/purge', params='', query='', fragment='')
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Tue, 15 Mar 2016 09:09:58 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOitlU1dFWlZHVll2bkE4OWhhM1JuUzFyR0VHST0=', 'Accept': 'application/xml'}
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><purge-urls><version>1.0.0</version><file-url>http://youjjzz.ztgame.com/index.html</file-url></purge-urls>
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => 8e370e70-06c2-4b4a-aa2a-aee6ae853f01
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>URL缓存刷新任务提交成功!</detail></ccsc>
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:159] DEBUG Purge request: http://youjjzz.ztgame.com/index.html
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/contentService/AddRefresh', params='', query='url=http%3A%2F%2Fyoujjzz.ztgame.com%2Findex.html', fragment='')
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-15 17:09:58', 'Host': 'openapi.exclouds.com', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Tue, 15 Mar 2016 17:09:58 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {u'message': u'\u5168\u90e8\u4efb\u52a1\u63d0\u4ea4\u6210\u529f', u'code': 200, u'batch': u'1458032998'}
+Tue, 15 Mar 2016 17:09:58 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [15/Mar/2016 17:09:58] "POST /cdn_api/purge HTTP/1.1" 200 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tue, 15 Mar 2016 17:13:01 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/purge', params='', query='', fragment='')
+Tue, 15 Mar 2016 17:13:01 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Tue, 15 Mar 2016 09:13:01 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOlU0Slc3TG1WRWdMVnlrakdyVGgwOEF4UDF1Zz0=', 'Accept': 'application/xml'}
+Tue, 15 Mar 2016 17:13:01 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Tue, 15 Mar 2016 17:13:01 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><purge-urls><version>1.0.0</version><file-url>http://youjjzz.ztgame.com/index.html</file-url></purge-urls>
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => 6ac87339-debf-4fb1-a1cf-048d07d650b1
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>URL缓存刷新任务提交成功!</detail></ccsc>
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:159] DEBUG Purge request: http://youjjzz.ztgame.com/index.html
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/contentService/AddRefresh', params='', query='url=http%3A%2F%2Fyoujjzz.ztgame.com%2Findex.html', fragment='')
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-15 17:13:02', 'Host': 'openapi.exclouds.com', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Tue, 15 Mar 2016 17:13:02 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {u'message': u'\u5168\u90e8\u4efb\u52a1\u63d0\u4ea4\u6210\u529f', u'code': 200, u'batch': u'1458033182'}
+Tue, 15 Mar 2016 17:13:02 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [15/Mar/2016 17:13:02] "POST /cdn_api/purge HTTP/1.1" 200 -
+Thu, 24 Mar 2016 15:36:47 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:287] DEBUG getFlowReport request: {'domain': 'porn88.ztgame.com', 'endDate': '2016-03-12', 'beginDate': '2016-03-12'}
+Thu, 24 Mar 2016 15:36:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='openapi.exclouds.com', path='/dataService/QueryTopURL', params='', query='domain=porn88.ztgame.com&endDate=2016-03-12&beginDate=2016-03-12', fragment='')
+Thu, 24 Mar 2016 15:36:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 15:36:47', 'Host': 'openapi.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 15:36:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: GET
+Thu, 24 Mar 2016 15:36:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 15:36:48 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:38:44 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Thu, 24 Mar 2016 15:38:44 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/prefetch', params='', query='', fragment='')
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 07:44:44 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOkJhN2V1d0Q0UXFZVDdTYTFuVHpzTFhhTGJjYz0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><prefetch-urls><version>1.0.0</version><prefetch-url>http://51porn.ztgame.com/no_del.txt</prefetch-url></prefetch-urls>
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>预缓存任务发布成功!</detail></ccsc>
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://51porn.ztgame.com/no_del.txt
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='service.exclouds.com:44100', path='/shyyapi/AddDelivery', params='', query='url=http%3A%2F%2F51porn.ztgame.com%2Fno_del.txt', fragment='')
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 15:44:44', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 15:44:44 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 15:44:45 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:44:45 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [24/Mar/2016 15:44:45] "POST /cdn_api/prefetch HTTP/1.1" 200 -
+Thu, 24 Mar 2016 15:47:42 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/prefetch/e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7', params='', query='', fragment='')
+Thu, 24 Mar 2016 15:47:42 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 07:47:42 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOnJQWFRrUVhsOERJSEl5ZXVHQ0xsbDU3VWZTUT0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 15:47:42 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: GET
+Thu, 24 Mar 2016 15:47:42 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: 
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1015] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<prefetch-result>
+<request-date>Thu, 24 Mar 2016 07:47:43 GMT</request-date>
+<items>
+<item>
+<itemId>e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7</itemId>
+<path>http://51porn.ztgame.com/no_del.txt</path>
+<status>failure</status>
+<rate>0</rate>
+</item>
+</items>
+</prefetch-result>
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1016] DEBUG response: Request_id => 93667ae6-063a-463c-a19f-4c907bafab03
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\dl_api\api\domainApi.py[line:955] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<Result><TaskId>c4112a62-aab9-4f9b-b800-c2345521a6c2</TaskId><Item><Path>http://51porn.ztgame.com/no_del.txt</Path><Status>wait</Status></Item></Result>
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:221] DEBUG prefetchQueryByPurgeId request: {'domain': u'51porn.ztgame.com'}
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='service.exclouds.com:44100', path='/shyyapi/QueryDelivery', params='', query='domain=51porn.ztgame.com', fragment='')
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 15:47:43', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 15:47:43 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:47:43 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 15:47:43] "GET /cdn_api/prefetch/46337761-f194-11e5-a3e5-e03f4978b2ff HTTP/1.1" 200 -
+Thu, 24 Mar 2016 15:53:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\yy_api\\api\\domainApi.py', reloading
+Thu, 24 Mar 2016 15:53:16 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/prefetch/e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7', params='', query='', fragment='')
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 07:53:47 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOm1pcVFxdXZzem1RR1g0WkFnd2o2VjVpUURKQT0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: GET
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: 
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1015] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<prefetch-result>
+<request-date>Thu, 24 Mar 2016 07:53:47 GMT</request-date>
+<items>
+<item>
+<itemId>e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7</itemId>
+<path>http://51porn.ztgame.com/no_del.txt</path>
+<status>failure</status>
+<rate>0</rate>
+</item>
+</items>
+</prefetch-result>
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1016] DEBUG response: Request_id => 502d2498-882c-4e5b-b598-08c47be08d36
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\dl_api\api\domainApi.py[line:955] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<Result><TaskId>c4112a62-aab9-4f9b-b800-c2345521a6c2</TaskId><Item><Path>http://51porn.ztgame.com/no_del.txt</Path><Status>wait</Status></Item></Result>
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:221] DEBUG prefetchQueryByPurgeId request: {'domain': u'51porn.ztgame.com'}
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='service.exclouds.com:44100', path='/shyyapi/QueryDelivery', params='', query='domain=51porn.ztgame.com', fragment='')
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 15:53:47', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:53:47 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: <?xml version="1.0" encoding="UTF-8"?><shyy><query><detail>false</detail><domain>51porn.ztgame.com</domain><date>20160324</date><type>xml</type></query><results><result ><url>![CDATAhttp://51porn.ztgame.com/no_del.txt]]</url> <precent>0%</precent><status>502</status> <createtime>20160324 15:44:44</createtime> </result></results></shyy>
+Thu, 24 Mar 2016 15:53:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 15:53:47] "GET /cdn_api/prefetch/46337761-f194-11e5-a3e5-e03f4978b2ff HTTP/1.1" 200 -
+Thu, 24 Mar 2016 15:55:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\yy_api\\api\\domainApi.py', reloading
+Thu, 24 Mar 2016 15:55:06 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:34] DEBUG url: ParseResult(scheme='http', netloc='cloudcdn.chinanetcenter.com', path='/api/prefetch/e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7', params='', query='', fragment='')
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 07:55:17 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOjBrb0FzekRtN2R5Nnovd1dKaEpadTlGNTNGST0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: GET
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: 
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1015] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<prefetch-result>
+<request-date>Thu, 24 Mar 2016 07:55:18 GMT</request-date>
+<items>
+<item>
+<itemId>e48cd2f6-5ffe-4c12-9c31-de6e70bcd1c7</itemId>
+<path>http://51porn.ztgame.com/no_del.txt</path>
+<status>failure</status>
+<rate>0</rate>
+</item>
+</items>
+</prefetch-result>
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1016] DEBUG response: Request_id => e4ca9a9b-27c3-46e9-9aaa-340f2b808c84
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\dl_api\api\domainApi.py[line:955] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<Result><TaskId>c4112a62-aab9-4f9b-b800-c2345521a6c2</TaskId><Item><Path>http://51porn.ztgame.com/no_del.txt</Path><Status>wait</Status></Item></Result>
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:221] DEBUG prefetchQueryByPurgeId request: {'domain': u'51porn.ztgame.com', 'type': 'json'}
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:28] DEBUG url: ParseResult(scheme='http', netloc='service.exclouds.com:44100', path='/shyyapi/QueryDelivery', params='', query='domain=51porn.ztgame.com&type=json', fragment='')
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 15:55:17', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 15:55:17 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 15:55:21 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 15:55:21 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {"query":{"detail":"false","domain":"51porn.ztgame.com","date":"20160324","type":"json"},"results":[{"url":"http://51porn.ztgame.com/no_del.txt","precent":"0%","status":"502","createtime":"20160324 15:44:44"}]}
+Thu, 24 Mar 2016 15:55:21 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 15:55:21] "GET /cdn_api/prefetch/46337761-f194-11e5-a3e5-e03f4978b2ff HTTP/1.1" 200 -
+Thu, 24 Mar 2016 15:59:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\ws_api\\util\\ApiUtil.py', reloading
+Thu, 24 Mar 2016 15:59:00 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:32] DEBUG 
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:33] DEBUG url: http://cloudcdn.chinanetcenter.com/api/prefetch
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 09:24:20 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOlgrZndCdHcrMld3OUVlMHdXUzljYVFkWFRCST0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: POST
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: <?xml version="1.0" encoding="utf-8"?><prefetch-urls><version>1.0.0</version><prefetch-url>http://51porn.ztgame.com/no_del.txt</prefetch-url></prefetch-urls>
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:202, reason:Accepted
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:145] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<response><message>success</message></response>
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:146] DEBUG response: Request_id => a582a578-8953-4120-9cf2-df40ef7a3fc0
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\dl_api\util\ApiUtil.py[line:143] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<ccsc><code>200</code><result>SUCCESS</result><detail>预缓存任务发布成功!</detail></ccsc>
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://51porn.ztgame.com/no_del.txt
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2F51porn.ztgame.com%2Fno_del.txt
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 17:24:20', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 17:24:20 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 17:24:22 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 17:24:22 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [24/Mar/2016 17:24:22] "POST /cdn_api/prefetch HTTP/1.1" 200 -
+
+
+
+
+
+
+
+
+
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:32] DEBUG 
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:33] DEBUG url: http://cloudcdn.chinanetcenter.com/api/prefetch/a582a578-8953-4120-9cf2-df40ef7a3fc0
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:35] DEBUG header:{'x-cnc-date': 'Thu, 24 Mar 2016 09:25:37 GMT', 'Content-Type': 'application/xml', 'Authorization': 'Basic Z2lhbnRfY2RuOml3dHQrMExqa2J6T0ZKQVRINU5oMVlhUFRadz0=', 'Accept': 'application/xml'}
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:36] DEBUG method: GET
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:37] DEBUG body: 
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\util\ApiUtil.py[line:51] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1015] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<prefetch-result>
+<request-date>Thu, 24 Mar 2016 09:25:38 GMT</request-date>
+<items>
+<item>
+<itemId>a582a578-8953-4120-9cf2-df40ef7a3fc0</itemId>
+<path>http://51porn.ztgame.com/no_del.txt</path>
+<status>failure</status>
+<rate>0</rate>
+</item>
+</items>
+</prefetch-result>
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\ws_api\api\domainApi.py[line:1016] DEBUG response: Request_id => 4d472edc-143d-417e-8372-abe16e58049b
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\dl_api\api\domainApi.py[line:955] DEBUG response:<?xml version="1.0" encoding="UTF-8"?>
+<Result><TaskId>4ebf8d2d-c7f6-4ebc-b8d3-130b71586bd7</TaskId><Item><Path>http://51porn.ztgame.com/no_del.txt</Path><Status>wait</Status></Item></Result>
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:221] DEBUG prefetchQueryByPurgeId request: {'domain': u'51porn.ztgame.com', 'type': 'json'}
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/QueryDelivery?domain=51porn.ztgame.com&type=json
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-03-24 17:25:37', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 24 Mar 2016 17:25:37 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:421] DEBUG response: {"query":{"detail":"false","domain":"51porn.ztgame.com","date":"20160324","type":"json"},"results":[{"url":"http://51porn.ztgame.com/no_del.txt","precent":"0%","status":"502","createtime":"20160324 15:44:44"},{"url":"http://51porn.ztgame.com/no_del.txt","precent":"0%","createtime":"20160324 17:24:22"}]}
+Thu, 24 Mar 2016 17:25:37 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 192.168.39.115 - - [24/Mar/2016 17:25:37] "GET /cdn_api/prefetch/3044811e-f1a2-11e5-95f2-e03f4978b2ff HTTP/1.1" 200 -
+Fri, 01 Apr 2016 16:46:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\reportApi.py', reloading
+Fri, 01 Apr 2016 16:46:51 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 16:54:48 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\reportApi.py', reloading
+Fri, 01 Apr 2016 16:54:49 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 16:55:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\reportApi.py', reloading
+Fri, 01 Apr 2016 16:55:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 16:56:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\reportApi.py', reloading
+Fri, 01 Apr 2016 16:56:09 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Fri, 01 Apr 2016 16:56:47 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO 127.0.0.1 - - [01/Apr/2016 16:56:47] "GET /cdn_api/bandwidth HTTP/1.1" 400 -
+Fri, 01 Apr 2016 17:01:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Detected change in 'E:\\ztcdn\\ztcdn\\api\\reportApi.py', reloading
+Fri, 01 Apr 2016 17:01:52 C:\Python27\lib\site-packages\werkzeug-0.10.4-py2.7.egg\werkzeug\_internal.py[line:87] INFO  * Restarting with stat
+Thu, 07 Apr 2016 15:59:14 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 15:59:14', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 15:59:14', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 15:59:14 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:00:37 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:00:37', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:00:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:00:37', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:00:38 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:01:30 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinad.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinad.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:01:30', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:01:30 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:01:31 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:500, reason:Internal Server Error
+Thu, 07 Apr 2016 16:02:06 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinad.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinad.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:02:06', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:02:06 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:500, reason:Internal Server Error
+Thu, 07 Apr 2016 16:05:15 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:05:15', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:05:15 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:05:15', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:05:16 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:500, reason:Internal Server Error
+Thu, 07 Apr 2016 16:09:47 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:09:47', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:09:47', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:09:47 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:500, reason:Internal Server Error
+Thu, 07 Apr 2016 16:13:19 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:13:19', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://service.exclouds.com:44100/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:13:19', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:13:19 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:500, reason:Internal Server Error
+Thu, 07 Apr 2016 16:40:37 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:40:37', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:404, reason:Not Found
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/shyyapi/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:40:37', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:40:37 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:404, reason:Not Found
+Thu, 07 Apr 2016 16:41:04 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:41:04', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:404, reason:Not Found
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:41:04', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:41:04 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:41:05 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:404, reason:Not Found
+Thu, 07 Apr 2016 16:43:11 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:43:11', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:196] DEBUG Prefetch request: http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/AddDelivery?url=http%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:43:11', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:43:11 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:43:12 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:411, reason:Length Required
+Thu, 07 Apr 2016 16:47:57 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:192] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg,http://www.hewenchinac.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg%2Chttp%3A%2F%2Fwww.hewenchinac.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:47:57', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:206, reason:Partial Content
+Thu, 07 Apr 2016 16:47:57 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:412] DEBUG response: {"errorUrl":["http://www.hewenchinac.com/static/images/new222s.jpg"],"message":"部分任务提交成功","code":206,"batch":"1460018865"}
+Thu, 07 Apr 2016 16:48:35 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:48] DEBUG 预热文件
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:192] DEBUG Prefetch request: http://www.hewenchina.com/static/images/news.jpg,http://www.hewenchina.com/static/images/new222s.jpg
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/AddDelivery?url=http%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnews.jpg%2Chttp%3A%2F%2Fwww.hewenchina.com%2Fstatic%2Fimages%2Fnew222s.jpg
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:48:35', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:48:35 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:412] DEBUG response: {"message":"全部任务提交成功","code":200,"batch":"1460018902"}
+Thu, 07 Apr 2016 16:56:08 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:54] DEBUG 根据purgeId查缓存
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:207] DEBUG prefetchQueryByPurgeId request: {'type': 'json', 'batch': '1460018902'}
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/QueryBatchDelivery?type=json&batch=1460018902
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 16:56:08', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 16:56:08 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:408] DEBUG response: 
+Thu, 07 Apr 2016 17:07:35 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:54] DEBUG 根据purgeId查缓存
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:207] DEBUG prefetchQueryByPurgeId request: {'type': 'json', 'batch': '1460018902'}
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/QueryBatchDelivery?type=json&batch=1460018902
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 17:07:35', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 17:07:35 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 17:07:36 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 17:07:36 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:407] DEBUG response: {"query":{"batch":"1460018902"},"results":[{"createtime":"2016-04-07 16:48:22","status":"errorCode 502","url":"http://www.hewenchina.com/static/images/new222s.jpg"},{"createtime":"2016-04-07 16:48:22","status":"errorCode 502","url":"http://www.hewenchina.com/static/images/news.jpg"}]}
+Thu, 07 Apr 2016 17:07:56 E:/ztcdn/ztcdn/api/yy_api/test/domainApiTest.py[line:54] DEBUG 根据purgeId查缓存
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:207] DEBUG prefetchQueryByPurgeId request: {'type': 'json', 'batch': '1460018902'}
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:26] DEBUG 
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:27] DEBUG url: http://openapi.exclouds.com/publishService/QueryBatchDelivery?type=json&batch=1460018902
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:29] DEBUG header:{'Date': '2016-04-07 17:07:56', 'Host': 'service.exclouds.com', 'Authorization': '6CC103239A9844C461AD066A14F72615'}
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:30] DEBUG method: POST
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:31] DEBUG body: 
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\util\ApiUtil.py[line:45] DEBUG response: status:200, reason:OK
+Thu, 07 Apr 2016 17:07:56 E:\ztcdn\ztcdn\api\yy_api\api\domainApi.py[line:446] DEBUG prefetchQueryByPurgeId response: {u'query': {u'batch': u'1460018902'}, u'results': [{u'status': u'errorCode 502', u'url': u'http://www.hewenchina.com/static/images/new222s.jpg', u'createtime': u'2016-04-07 16:48:22'}, {u'status': u'errorCode 502', u'url': u'http://www.hewenchina.com/static/images/news.jpg', u'createtime': u'2016-04-07 16:48:22'}]}

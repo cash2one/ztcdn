@@ -22,11 +22,34 @@ ADMIN_TOKEN = '60feb5797e974a89af19e9a40f04ac07'
 ADMIN_PROJ = '1234567890'
 
 
-DL_USER = 'test'
-DL_PASS = 'test'
+DL_USER = '1234567890abcdef'
+DL_PASS = 'accesskeyidexample6/20150714233600/xnop015/dnioncloud'
 
-WS_USER = 'test1'
-WS_PASS = 'test'
+WS_USER = 'giant_cdn'
+WS_PASS = 'w7kWNDe9MKnVRbbh'
+
+YY_KEY = '6CC103239A9844C461AD066A14F72615'
+
+CDN_LOG_DB = 'mysql://root:@localhost/cloud_cdn'
+# CDN_LOG_DB = 'mysql://root:root@172.30.250.165/cloud_cdn'
+
+
+# CNAME DB
+#CNAME_DB1_HOST = '172.30.250.186'
+#CNAME_DB1_USER = 'dns'
+#CNAME_DB1_PASS = 'Kqyygywcw1'
+CNAME_DB1_HOST = 'localhost'
+CNAME_DB1_USER = 'root'
+CNAME_DB1_PASS = ''
+
+#CNAME_DB2_HOST = '172.30.250.149'
+#CNAME_DB2_USER = 'cloud_cdn'
+#CNAME_DB2_PASS = 'Cloud_Cdn113322'
+CNAME_DB2_HOST = 'localhost'
+CNAME_DB2_USER = 'root'
+CNAME_DB2_PASS = ''
+
+YY_USER = ['dashabi', '2bi', 'cloudcdn_admin']  # addDomain and cname used
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(pathname)s[line:%(lineno)d] %(levelname)s %(message)s',

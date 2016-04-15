@@ -18,15 +18,16 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import abort
 from flask import request
 from flask import jsonify
-from config import AUTH_PUBLIC_URI, ADMIN_TOKEN
+from config import AUTH_PUBLIC_URI, ADMIN_TOKEN, CDN_LOG_DB
 import json
 import httplib
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/cloud_cdn'
 app.config['SQLALCHEMY_BINDS'] = {
-    #'cdn_log': 'mysql://root:root@172.30.250.165/cloud_cdn'
-    'cdn_log': 'mysql://root:@localhost/cloud_cdn'
+    'cdn_log': CDN_LOG_DB
 }
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
 db = SQLAlchemy(app)
 
 @app.errorhandler(401)

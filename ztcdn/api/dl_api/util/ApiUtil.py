@@ -28,11 +28,11 @@ def hashPassword(data, key):
 
 def httpReqeust(url, body = None, headers = None, method = "POST"):
     ''' 进行http请求 '''
+    logger.debug("")
+    logger.debug("url: " + str(url))
     urlList = urlparse.urlparse(url)
-    
-    logger.debug("url: " + str(urlList));
     logger.debug("header:" + str(headers))
-    logger.debug("method: " + method);
+    logger.debug("method: " + method)
     logger.debug("body: " + body)
     if not urlList.scheme or not urlList.netloc or not urlList.path:
         raise Exception("url 格式出错, " + url)
@@ -41,13 +41,13 @@ def httpReqeust(url, body = None, headers = None, method = "POST"):
         con = httplib.HTTPSConnection(urlList.netloc, timeout = 15)
     else:
         con = httplib.HTTPConnection(urlList.netloc, timeout = 15)
-    path = urlList.path;
+    path = urlList.path
     
     if urlList.query:
         path = path + "?" + urlList.query
     con.request(method, path, body, headers)
     res = con.getresponse()
-    logger.debug("status:" + str(res.status) + ", reason:" + res.reason)
+    logger.debug("response: status:" + str(res.status) + ", reason:" + res.reason)
     return res
 
 def getRFC3339Time(dateStr):

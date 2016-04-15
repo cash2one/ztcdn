@@ -184,7 +184,7 @@ class DomainApi(object):
 
     def delete(self, disId):
         r = self.disable(disId)
-        print r.getRet(),r.getMsg()
+        #print r.getRet(),r.getMsg()
         result = self.find(disId)
         if result.getRet() == 0:
             domain = result.getDomain()
@@ -198,7 +198,7 @@ class DomainApi(object):
             else:
                 return xmlToFailure(res)
         else:
-            print 'cannot find %s' % disId
+            #print 'cannot find %s' % disId
             return result
 
     def enable(self, disId):
@@ -526,7 +526,7 @@ class OriginConfig(object):
 
 class AdvOriginConfig(object):
     '''复杂回源规则'''
-    def __init__(self, carrierCode = "ANY", originSourceEx = None, backToSourceType = "Backup"):
+    def __init__(self, carrierCode = "ANY", originSourceEx = None, backToSourceType = "RoundRobin"):
         ''' 初始化复杂回源规则
         @type isps: list of str
         @param isps: 设置isp信息,允许设定多个运营商;dx("中国电信"), wt("中国联通"), yidong("中国移动"), tt("中国铁通"), jyw("中国教育网"), changkuan("长城宽带"), gd("中国广电"), qita("其他"), all("全部");

@@ -16,15 +16,21 @@ logging.basicConfig(level = logging.DEBUG)
 
 api = domainApi.DomainApi()
 
-
-
 logging.debug("获取全部域名的流量报表")
 result = api.getBandWidthReport("jay.ztgame.com","2015-11-19", "2015-11-23")
 print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
 print 'flowPoints:'
 for i in result.getFlowPoints():
     print i.flow, i.point
+
 """
+logging.debug("获取全部域名的流量报表")
+result = api.getFlowReport("jay.ztgame.com","2015-11-19", "2015-11-23")
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
+print 'flowPoints:'
+for i in result.getFlowPoints():
+    print type(i.flow), i.point
+
 logging.debug("获取某域名的流量报表")
 result = api.getFlowReport(reportForm, domainId)
 print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()

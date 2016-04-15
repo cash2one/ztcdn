@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # coding: UTF-8
 import MySQLdb
+from ztcdn.config import CNAME_DB1_HOST, CNAME_DB1_USER, CNAME_DB1_PASS, CNAME_DB2_HOST, \
+    CNAME_DB2_USER, CNAME_DB2_PASS, YY_USER
+
 class CName(object):
    def __init__(self):
-      self.conn=MySQLdb.connect(host='172.30.250.186',user='dns',passwd='Kqyygywcw1',port=3306)
+      self.conn=MySQLdb.connect(host=CNAME_DB1_HOST,user=CNAME_DB1_USER,passwd=CNAME_DB1_PASS,port=3306)
       self.cur=self.conn.cursor(MySQLdb.cursors.DictCursor)
-      self.conn2=MySQLdb.connect(host='172.30.250.149',user='cloud_cdn',passwd='Cloud_Cdn113322',port=3306)
+      self.conn2=MySQLdb.connect(host=CNAME_DB2_HOST,user=CNAME_DB2_USER,passwd=CNAME_DB2_PASS,port=3306)
       self.cur2=self.conn2.cursor(MySQLdb.cursors.DictCursor)
    def get_zone(self,domain):
       self.cur.execute('select id from dns.domain where name=%s;' , domain)
@@ -22,15 +25,17 @@ class CName(object):
       return _domainzone_idl
    def get_domain_cname(self,distid):
       _distid=distid
-      self.cur2.execute('select id,domain_type,domain_name from cloud_cdn.cdn_manage_domain where domain_id=%s;' , _distid)
+      self.cur2.execute('select id,domain_type,domain_name,user_name from cloud_cdn.cdn_manage_domain where domain_id=%s;' , _distid)
       _domain_v=self.cur2.fetchone()
       _domain_v_id=_domain_v.get('id', None)
       _domain_v_type=_domain_v.get('domain_type', None)
       _domain_v_name=_domain_v.get('domain_name', None)
-      if _domain_v_type == "web":
-         sp_domain_type="dl_api"
-      elif _domain_v_type == "download":
-         sp_domain_type="ws_api"
+      user_name = _domain_v.get('user_name', None)
+      if user_name in YY_USER:
+          sp_domain_type = 'yy_api'
+      else:
+          self.cur2.execute('select used_sp_list from cloud_cdn.cdn_manage_sp_choose where service_type="%s";' % _domain_v_type)
+          sp_domain_type = self.cur2.fetchone()['used_sp_list'].split(',')[0]
       self.cur2.execute('select domain_cname from cloud_cdn.cdn_manage_sp where domain_table_id=%s and sp_domain_type="%s";' % (_domain_v_id, sp_domain_type))
       _sp_sql=self.cur2.fetchone()
       _sp_sql["domain_name"] = _domain_v_name

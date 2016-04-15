@@ -10,53 +10,137 @@ reload(sys)
 
 if __name__ == '__main__':
     pass
-from ztcdn.api.ws_api.api import domainApi
+from ztcdn.api.yy_api.api import domainApi
 import logging
 
 logging.basicConfig(level = logging.DEBUG)
 
 api = domainApi.DomainApi()
 
-purgeLocation = "a79af3d0-7188-42bd-a5a9-472355b4dc4e"
-createDomainRequstId = "42b50404-2db3-4802-966c-1b3c9ad42948"
+#purgeLocation = "a79af3d0-7188-42bd-a5a9-472355b4dc4e"
+#createDomainRequstId = "42b50404-2db3-4802-966c-1b3c9ad42948"
 #domainId = "193382"
-domainName = "downloadnew1.ztgame.com.cn"
-
-
+domainName = "www.hewenchina.com"
 domain = domainApi.Domain()
 domain.domainName = domainName
-domain.domainId = '1260496'
-domain.serviceType = "download"
+domain.serviceType = "web"
 
 originConfig = domainApi.OriginConfig()
-originConfig.originIps = ["222.73.243.32",]
+originConfig.originIps = ["119.97.171.112"]
 
 domain.originConfig = originConfig
 
 cacheBehavior = domainApi.CacheBehavior()
-cacheBehavior.cacheTtl =31536000
-cacheBehavior.pathPattern = ".*"
-cacheBehavior.ignoreCacheControl = False
+cacheBehavior.cacheTtl = "315360"
+cacheBehavior.pathPattern = "*.jpg"
+cacheBehavior.ignoreCacheControl = "True"
 domain.cacheBehaviors = [cacheBehavior]
 
 
-queryStringSetting = domainApi.QueryStringSetting()
-queryStringSetting.ignoreQueryString = False
-queryStringSetting.pathPattern = ".*"
-domain.queryStringSettings = [queryStringSetting]
+#queryStringSetting = domainApi.QueryStringSetting()
+#queryStringSetting.ignoreQueryString = False
+#queryStringSetting.pathPattern = ".*"
+#domain.queryStringSettings = [queryStringSetting]
 
 
 #result = api.modify(domain)
 #print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
+
+
+#result = api.analyticsServer('porn88.ztgame.com', '2016-03-12', '2016-03-12')
+
+#print result.read()
+
+logging.debug("根据purgeId查缓存")
+#purgeId = result.getXCncRequestId()
+purgeId = "1460018902"
+result = api.prefetchQueryByPurgeId(purgeId)
+print 'result:', result.getRet(), result.getMsg()
+for i in result.getPurgeList()[0].itemList:
+    print i.status, i.url, i.rate
+
+
+"""
+logging.debug("获取指定频道信息")
+result = api.find('d8e2141e-e5e3-11e5-8ad5-e03f4978b2ff')
+print 'result:', result.domain.cname,  result.domain.status, result.getRet(), result.getMsg(), result.getXCncRequestId()
+for i in result.domain.cacheBehaviors:
+    print i.pathPattern, i.ignoreCacheControl, i.cacheTtl
+
+
+
 result = api.delete('')
 print 'result:', result.getRet(), result.getMsg()
-"""
+
+
+logging.debug("预热文件")
+#dirs = ['http://hewenchina.com/static/css/']
+urls = ['http://www.hewenchina.com/static/images/news.jpg', 'http://www.hewenchina.com/static/images/new222s.jpg' ]
+purgeBatch = domainApi.PurgeBatch(urls=urls)
+result = api.prefetch(purgeBatch)
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
+
+
 logging.debug("获取用户下的频道列表")
 result = api.listAll()
-print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId(), result.getLocation()
-print 'domainSummarys:', result.getDomainSummarys()
-for i in result.getDomainSummarys():
-    print i.domainName, i.domainId
+print 'result:', result.getRet(), result.getMsg()
+print 'domainSummarys:', result.domainSummarys
+for i in result.domainSummarys:
+    print i["name"], i["id"]
+
+logging.debug("获取带宽")
+result = api.getBandWidthReport('www.hewenchina.com', '2016-03-05', '2016-03-08')
+print 'result:', result.getRet(), result.getMsg()
+print 'flowPoints:'
+for i in result.getFlowPoints():
+    print i.flow, i.point
+
+
+
+logging.debug("获取流量")
+result = api.getFlowReport('www.hewenchina.com', '2016-03-05', '2016-03-08')
+print 'result:', result.getRet(), result.getMsg()
+print 'flowPoints:'
+for i in result.getFlowPoints():
+    print type(i.flow), i.point
+
+
+
+
+logging.debug("根据purgeId查缓存")
+#purgeId = result.getXCncRequestId()
+purgeId = "1457320262"
+result = api.purgeQueryByPurgeId(purgeId)
+print 'result:', result.getRet(), result.getMsg()
+for i in result.getPurgeList()[0].itemList:
+    print i.status, i.url, i.rate
+
+
+
+
+logging.debug("批量清除某域名下缓存")
+#dirs = ['http://hewenchina.com/static/css/']
+urls = ['http://www.hewenchina.com/static/images/news.jpg', 'http://www.hewenchina.com/static/images/new222s.jpg' ]
+purgeBatch = domainApi.PurgeBatch(urls=urls)
+result = api.purge(purgeBatch)
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
+# batch = 1457320262
+
+
+
+result = api.modify(domain)
+print 'result:', result.getRet(), result.getMsg()
+
+
+logging.debug("获取用户下的频道列表")
+result = api.listAll()
+print 'result:', result.getRet(), result.getMsg()
+print 'domainSummarys:', result.domainSummarys
+for i in result.domainSummarys:
+    print i["name"], i["id"]
+
+result = api.add(domain)
+print 'result:', result.getRet(), result.getMsg(), result.getXCncRequestId()
 
 result = api.find("1283933")
 print 'result:', result.domain.cname,  result.domain.status, result.getRet(), result.getMsg(), result.getXCncRequestId()
