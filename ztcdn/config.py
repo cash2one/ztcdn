@@ -22,13 +22,13 @@ ADMIN_TOKEN = '60feb5797e974a89af19e9a40f04ac07'
 ADMIN_PROJ = '1234567890'
 
 
-DL_USER = '1234567890abcdef'
-DL_PASS = 'accesskeyidexample6/20150714233600/xnop015/dnioncloud'
+DL_USER = '123'
+DL_PASS = '456'
 
-WS_USER = 'giant_cdn'
-WS_PASS = 'w7kWNDe9MKnVRbbh'
+WS_USER = '123'
+WS_PASS = '123'
 
-YY_KEY = '6CC103239A9844C461AD066A14F72615'
+YY_KEY = '123'
 
 CDN_LOG_DB = 'mysql://root:@localhost/cloud_cdn'
 # CDN_LOG_DB = 'mysql://root:root@172.30.250.165/cloud_cdn'
